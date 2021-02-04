@@ -1,0 +1,10 @@
+{
+    "Emp_ID": "123455",
+    "Pay_from": "2021-01-01",
+    "Pay_to": "2021-02-01",
+    "Position": "IT Student Worker",
+    "Department": "Engineering",
+    "Pay_per_hour": 16,
+    "Tax_percent": 9,
+    "Active": true
+}
