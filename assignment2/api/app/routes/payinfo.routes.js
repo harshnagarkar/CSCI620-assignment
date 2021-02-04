@@ -3,25 +3,28 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new Book
+    // Create a new Payinfo
     router.post("/", payinfo.create);
   
-    // Retrieve all Books
+    // Retrieve all Payinfo
     router.get("/", payinfo.findAll);
   
-    // Retrieve all published Books
-    router.get("/department", payinfo.findAllDepartment);
+    // Retrieve all published Payinfo
+    router.get("/department/:dept", payinfo.findAllDepartment);
   
-    // Retrieve a single Book with id
-    router.get("/:id", payinfo.find);
+    // Retrieve a single Payinfo with id
+    router.get("id/:id", payinfo.find);
   
-    // Update a Book with id
-    router.put("/:id", payinfo.update);
+    router.get("/searchEmployee", payinfo.searchPay)
+
+    router.get("/searchPosition", payinfo.searchPosition)
+    // Update a Payinfo with id
+    router.put("id/:id", payinfo.update);
   
-    // Delete a Book with id
-    router.delete("/:id", payinfo.delete);
+    // Delete a Payinfo with id
+    router.delete("id/:id", payinfo.delete);
   
-    // Create a new Book
+    // Create a new Payinfo
     router.delete("/", payinfo.deleteAll);
   
     app.use('/api/payinfo', router);
