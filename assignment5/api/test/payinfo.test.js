@@ -116,6 +116,8 @@ describe("DELETE /", function () {
       expect(response.status).to.equal(200);
       delete response.body[0]["updatedAt"];
       delete data1["updatedAt"];
+      data1.Pay_from=(new Date(data1.Pay_from)).toISOString()
+      data1.Pay_to=new Date(data1.Pay_to).toISOString()
       console.log(response.body[0])
       console.log(data1)
       let data2=response.body[0]
