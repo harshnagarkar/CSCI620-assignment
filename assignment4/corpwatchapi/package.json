@@ -1,0 +1,25 @@
+{
+  "name": "@harshnagarkar/corpwatch-test",
+  "version": "0.0.6",
+  "description": "Corpwatch Api extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshnagarkar/Corpwatch-package.git"
+  },
+  "keywords": [
+    "corpwatch"
+  ],
+  "author": "Harsh Nagarkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harshnagarkar/Corpwatch-package/issues"
+  },
+  "homepage": "https://github.com/harshnagarkar/Corpwatch-package#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
