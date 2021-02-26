@@ -1,0 +1,19 @@
+{
+  "name": "Pay-Info-api",
+  "version": "1.0.0",
+  "description": "Pay_Info CRUD API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hnagarkar",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.10",
+    "supertest": "^6.1.3"
+  }
+}
