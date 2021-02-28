@@ -106,7 +106,7 @@ describe("DELETE /", function () {
   
       expect(response.status).to.eql(200);
       let data1 = response.body[0]
-      // data1.Pay_per_hour=25
+      data1.Pay_per_hour=25
       let id = response.body[0]._id
       // console.log(data1)
       response = await request.put(`/id/${id}`).send(data1);
@@ -121,7 +121,7 @@ describe("DELETE /", function () {
       console.log(response.body[0])
       console.log(data1)
       let data2=response.body[0]
-      expect(data2).to.equal(data1);
+      expect(data2.Pay_per_hour).to.equal(data1.Pay_per_hour);
     });
   });
 
