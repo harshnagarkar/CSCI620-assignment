@@ -32,6 +32,7 @@ var corsOptions = {
 
 app.use(cors(corsOptions));
 
+
 const db = require("./app/models");
 db.mongoose
   .connect(db.url, {

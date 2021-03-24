@@ -149,7 +149,7 @@ exports.create = (req, res) => {
       });
   };
 
-  exports.searchEmployee = (req, res) => {
+  exports.searchPay = (req, res) => {
     // if (!req.params.dept) {
     //   return res.status(400).send({
     //     message: "Data to find can not be empty!"
