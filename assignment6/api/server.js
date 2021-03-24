@@ -2,11 +2,36 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+// var corsOptions = {
+//   // origin: "http://localhost:3000"
+//   origin: "http://localhost:4200"
+// };
+
+var jwt = require('express-jwt');
+var jwks = require('jwks-rsa');
+
+var jwtCheck = jwt({
+  secret: jwks.expressJwtSecret({
+      cache: true,
+      rateLimit: true,
+      jwksRequestsPerMinute: 5,
+      jwksUri: 'https://hnagarkar.us.auth0.com/.well-known/jwks.json'
+}),
+audience: 'https://localhost:3000/payinfo',
+issuer: 'https://hnagarkar.us.auth0.com/',
+algorithms: ['RS256']
+});
+
+app.use(jwtCheck);
+
+
 var corsOptions = {
   origin: "http://localhost:4200"
 };
 
+
 app.use(cors(corsOptions));
+
 
 const db = require("./app/models");
 db.mongoose

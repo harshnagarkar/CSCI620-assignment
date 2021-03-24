@@ -1,0 +1,41 @@
+<p>Default dates will be assigned</p>
+
+<mat-form-field appearance="fill">
+  <mat-label>Employee ID</mat-label>
+  <input matInput disabled [(ngModel)]="employee.Emp_ID">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Position</mat-label>
+  <input matInput [(ngModel)]="employee.Position">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Department</mat-label>
+  <input matInput [(ngModel)]="employee.Department">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Pay Per Hour</mat-label>
+  <input matInput [(ngModel)]="employee.Pay_per_hour">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Tax Percent</mat-label>
+  <input matInput [(ngModel)]="employee.Tax_percent">
+</mat-form-field>
+<br>
+<mat-form-field>
+  <input disabled matInput [matDatepicker]="picker" [(ngModel)]="employee.Pay_from">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <input disabled matInput [matDatepicker]="picker1" [(ngModel)]="employee.Pay_to">
+  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+  <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+<br>
+<button mat-button color="primary" (click)="save()">Save</button>
+
