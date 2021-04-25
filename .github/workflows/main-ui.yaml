@@ -42,7 +42,7 @@ jobs:
         id: docker_build_ui
         uses: docker/build-push-action@v2
         with:
-          context: ui
+          context: assignment7/ui
           push: true
           tags: hknagark/csci620-app-ui:latest
       -
